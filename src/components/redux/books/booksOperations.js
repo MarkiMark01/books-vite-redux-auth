@@ -47,7 +47,6 @@ export const fetchCart = createAsyncThunk(
 export const addNewCart = createAsyncThunk(
     "todos/addNewTodo",
     async function (book, { rejectWithValue, dispatch }) {
-        // accept book as a parameter
         try {
             const response = await fetch(
                 "https://66068cdbbe53febb857e25cd.mockapi.io/api/b/cart",
@@ -56,7 +55,7 @@ export const addNewCart = createAsyncThunk(
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify(book), // send book details in the request body
+                    body: JSON.stringify(book),
                 }
             );
             if (!response.ok) {

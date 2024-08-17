@@ -5,8 +5,8 @@ import useMenuItems from "../../shared/hooks/useMenuItems";
 import styles from "./stylesModHead.module.scss";
 import useModal from "../../shared/hooks/useModal";
 import { useTranslation } from "react-i18next";
-import usa from "../../../Assets/usa.png";
-import ua from "../../../Assets/ua.png";
+import usa from "../../../assets/usa.png";
+import ua from "../../../assets/ua.png";
 
 const modalRoot = document.querySelector("#modal-root");
 

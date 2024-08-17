@@ -60,17 +60,6 @@ const BooksId = () => {
       navigate("/cart");
     }
   };
-
-  // if (!uniqueBook) {
-  //   return (
-  //     <section className={styles.bookId__emptyBlock}>
-  //       <p className={styles.bookId__empty}>
-  //         The book has not been selected yet...
-  //       </p>
-  //     </section>
-  //   );
-  // }
-
   return (
     <BooksIdComponents
       uniqueBook={uniqueBook}

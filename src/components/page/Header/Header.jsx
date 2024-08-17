@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-import useMenuItems from "../../shared/hooks/useMenuItems"; // Import the custom hook
+import useMenuItems from "../../shared/hooks/useMenuItems";
 import Register from "./Register";
 import Logout from "./Logout";
 import styles from "./stylesHeader.module.scss";

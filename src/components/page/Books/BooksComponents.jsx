@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Loader } from "../../shared/loader";
+import { Loader } from "../../shared/Loader";
 import styles from "./stylesBooks.module.scss";
 import useDebounce from "../../shared/hooks/useDebounce";
 
@@ -13,7 +13,7 @@ const BooksComponents = ({
   priceFilter,
   handlePriceFilter,
   handleTextFilter,
-  user, // Додаємо проп user для перевірки стану користувача
+  user,
 }) => {
   const { t } = useTranslation();
   const [localTextFilter, setLocalTextFilter] = useState(textFilter);
