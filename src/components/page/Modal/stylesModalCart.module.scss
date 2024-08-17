@@ -1,0 +1,60 @@
+.modal__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+
+  .modal__content {
+    text-align: center;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    min-height: 250px;
+    width: 100%;
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+    @media (max-width: 430px) {
+      top: 49%;
+    }
+    .modal__giftBox {
+      @media (max-width: 419px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .gift {
+      width: 400px;
+      height: 250px;
+      object-fit: contain;
+
+      @media (max-width: 429px) {
+        width: 300px;
+        height: 250px;
+      }
+      @media (max-width: 419px) {
+        width: 300px;
+        height: 250px;
+      }
+    }
+    .modal__ok {
+      width: 90px;
+      height: 23px;
+      margin-top: 8px;
+      border-radius: 15px;
+      border: none;
+      background-color: #f3d88e;
+      color: #001838;
+      cursor: pointer;
+    }
+  }
+}

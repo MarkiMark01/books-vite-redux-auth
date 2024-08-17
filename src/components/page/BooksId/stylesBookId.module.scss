@@ -1,0 +1,485 @@
+@import "../../shared//styles/variables";
+@import "../../shared/styles/placeholders";
+
+.bookId {
+  @extend %flex-start;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $color-lightblue;
+  .bookId__btnBack {
+    @extend %flex-start;
+    background-color: $color-white;
+    width: 1220px;
+    height: 75px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+  }
+  .bookId__buttonBack {
+    @extend %flex-center;
+    width: 70px;
+    height: 35px;
+    font-size: 12px;
+    font-weight: 900;
+    border-radius: 50px;
+    border: 1px solid $color-darkblue;
+    background: $color-linear-gradient;
+    color: $color-darkblue;
+    transition: 0.1s;
+    cursor: pointer;
+    margin-left: 35px;
+
+    @media (max-width: 899px) {
+      margin-left: 29px;
+    }
+    @media (max-width: 686px) {
+      width: 65px;
+      height: 30px;
+      font-size: 11px;
+      font-weight: 900;
+    }
+    @media (max-width: 414px) {
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+      background: $color-darkblue;
+      color: $color-gold;
+      border: 2px solid $color-gold;
+    }
+  }
+
+  .bookId__box {
+    @extend %flex-center2;
+    width: 1220px;
+    height: 100%;
+    background-color: $color-white;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+    @media (max-width: 899px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .books__idImg {
+      width: 320px;
+      height: 400px;
+      border-radius: 20px;
+      object-fit: contain;
+      margin-left: 20px;
+      border: 1px solid $color-lightblue;
+      box-shadow: 0px 5px 20px -8px $color-blue;
+      margin-bottom: 10px;
+
+      @media (max-width: 999px) {
+        width: 320px;
+        height: 430px;
+      }
+      @media (max-width: 999px) {
+        width: 300px;
+        height: 430px;
+      }
+      @media (max-width: 882px) {
+        margin-right: 5px;
+      }
+      @media (max-width: 816px) {
+        width: 270px;
+        height: 410px;
+      }
+      @media (max-width: 736px) {
+        width: 250px;
+        height: 390px;
+      }
+      @media (max-width: 686px) {
+        margin-right: 20px;
+      }
+    }
+    .bookId__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 520px;
+      min-height: 380px;
+      color: $color-darkblue;
+      padding: 0 20px 0 10px;
+      margin: 0 5px 0 5px;
+      box-shadow: 0px 20px 30px -30px $color-blue;
+
+      @media (max-width: 899px) {
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+      @media (max-width: 882px) {
+        width: 450px;
+      }
+      @media (max-width: 816px) {
+        width: 400px;
+        height: 350px;
+      }
+      @media (max-width: 736px) {
+        width: 370px;
+        padding-right: 10px;
+      }
+      @media (max-width: 686px) {
+        box-shadow: 0px 5px 20px -8px $color-blue;
+      }
+      @media (max-width: 402px) {
+        height: 390px;
+      }
+      @media (max-width: 360px) {
+        height: 410px;
+      }
+      @media (max-width: 327px) {
+        height: 430px;
+      }
+      @media (max-width: 319px) {
+        height: 430px;
+      }
+      @media (max-width: 310px) {
+        height: 450px;
+      }
+    }
+    .bookId_purchase {
+      @extend %flex-center;
+      flex-direction: column;
+      width: 300px;
+      height: 250px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 15px;
+      background-color: $color-white;
+      color: $color-darkblue;
+      margin-right: 20px;
+      box-shadow: 0px 5px 20px -8px $color-blue;
+
+      @media (max-width: 899px) {
+        margin-top: 10px;
+        width: 95%;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 736px) {
+        width: 100%;
+        margin-right: 30px;
+        margin-left: 30px;
+        height: 210px;
+      }
+      @media (max-width: 750px) {
+        margin-top: 20px;
+      }
+      @media (max-width: 429px) {
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+      @media (max-width: 290px) {
+        margin-top: 40px;
+      }
+    }
+    .bookId__title {
+      font-size: 23px;
+      font-weight: 700;
+      margin-bottom: 20px;
+
+      @media (max-width: 999px) {
+        font-size: 22px;
+      }
+      @media (max-width: 816px) {
+        font-size: 20px;
+      }
+    }
+    .bookId__author {
+      font-size: 17px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      @media (max-width: 816px) {
+        font-size: 16px;
+      }
+    }
+    .bookId__level {
+      font-size: 17px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      @media (max-width: 816px) {
+        font-size: 16px;
+      }
+    }
+    .bookId__sd {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+
+      @media (max-width: 816px) {
+        font-size: 16px;
+      }
+    }
+    .bookId__sDescription {
+      font-size: 18px;
+      text-align: justify;
+      line-height: 1.2;
+      margin-top: 5px;
+      margin-bottom: 20px;
+
+      @media (max-width: 999px) {
+        font-size: 17px;
+      }
+      @media (max-width: 816px) {
+        font-size: 16px;
+      }
+    }
+    .bookId__description {
+      margin: 0px;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: underline;
+      color: $color-blue;
+
+      @media (max-width: 816px) {
+        font-size: 17px;
+      }
+    }
+
+    .booksId__price {
+      @extend %flex-sb;
+      height: 40px;
+      width: 90%;
+      color: $color-darkblue;
+      font-weight: 450;
+      font-size: 20px;
+
+      @media (max-width: 999px) {
+        font-size: 19px;
+      }
+      @media (max-width: 899px) {
+        font-size: 22px;
+      }
+      @media (max-width: 816px) {
+        font-size: 21px;
+      }
+    }
+    .booksId__price2 {
+      font-size: 22px;
+      font-weight: 700;
+
+      @media (max-width: 999px) {
+        font-size: 21px;
+      }
+      @media (max-width: 816px) {
+        font-size: 21px;
+      }
+    }
+    .booksId__quantity {
+      @extend %flex-sb;
+      height: 40px;
+      width: 90%;
+      margin-top: 10px;
+      font-weight: 450;
+      font-size: 20px;
+
+      @media (max-width: 999px) {
+        font-size: 19px;
+      }
+
+      @media (max-width: 899px) {
+        font-size: 22px;
+      }
+      @media (max-width: 816px) {
+        font-size: 21px;
+      }
+    }
+    .booksId__quantity > input {
+      text-align: center;
+      width: 50px;
+      height: 25px;
+      border-radius: 30px;
+      font-size: 18px;
+      border: 2px solid $color-darkblue;
+      outline: none;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .booksId__total {
+      @extend %flex-sb;
+      height: 40px;
+      width: 90%;
+      font-weight: 450;
+      font-size: 20px;
+      margin-top: 10px;
+
+      @media (max-width: 999px) {
+        font-size: 19px;
+      }
+      @media (max-width: 899px) {
+        font-size: 22px;
+      }
+      @media (max-width: 816px) {
+        font-size: 21px;
+      }
+    }
+    .booksId__total2 {
+      font-size: 22px;
+      font-weight: 700;
+
+      @media (max-width: 999px) {
+        font-size: 21px;
+      }
+      @media (max-width: 736px) {
+      }
+    }
+    .bookId__btn {
+      @extend %flex-center;
+      width: 90%;
+      height: 45px;
+      margin-top: 20px;
+
+      @media (max-width: 736px) {
+        margin-top: 0px;
+      }
+    }
+    .bookId__button {
+      width: 90px;
+      height: 40px;
+      font-size: 12px;
+      font-weight: 900;
+      border-radius: 50px;
+      border: 1px solid $color-darkblue;
+      background: $color-linear-gradient;
+      color: $color-darkblue;
+      transition: 0.1s;
+      cursor: pointer;
+
+      @media (max-width: 999px) {
+        width: 87px;
+        height: 38px;
+        font-weight: 700;
+      }
+      @media (max-width: 736px) {
+        width: 85px;
+        height: 35px;
+        font-weight: 700;
+      }
+      @media (max-width: 414px) {
+        font-size: 11px;
+        font-weight: 700;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+        background: $color-darkblue;
+        color: $color-gold;
+        border: 2px solid $color-gold;
+        width: 95px;
+        height: 45px;
+      }
+      margin-left: 10px;
+    }
+  }
+
+  .bookId__fullDesc {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 1220px;
+    height: 400px;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.2;
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    background-color: $color-white;
+    color: $color-darkblue;
+    padding-bottom: 15%;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+    @media (max-width: 892px) {
+      padding-top: 0px;
+    }
+    @media (max-width: 826px) {
+      height: 100%;
+      padding-bottom: 0px;
+    }
+
+    .bookId__fullDescButton {
+      @extend %flex-center;
+      width: 70px;
+      height: 35px;
+      font-size: 13px;
+      font-weight: 900;
+      border-radius: 50px;
+      border: 1px solid $color-darkblue;
+      background: $color-blue;
+      color: $color-white;
+      transition: 0.1s;
+      cursor: pointer;
+      margin-bottom: 20px;
+
+      @media (max-width: 399px) {
+        width: 60px;
+        height: 30px;
+        font-size: 11px;
+        font-weight: 800;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+        background: $color-linear-gradient;
+        color: $color-darkblue;
+        border: 2px solid $color-darkblue;
+      }
+    }
+  }
+  .bookId__btn2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 1220px;
+    height: 60px;
+    background-color: #fff;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+
+    .bookId__button2 {
+      width: 100px;
+      height: 35px;
+      border-radius: 50px;
+      border: 1px solid $color-darkblue;
+      background: $color-linear-gradient;
+      font-weight: 700;
+      font-size: 12px;
+      color: $color-darkblue;
+      transition: 0.1s;
+      cursor: pointer;
+      margin-right: 20px;
+
+      @media (max-width: 399px) {
+        width: 80px;
+        height: 30px;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+        background: $color-darkblue;
+        color: $color-gold;
+      }
+    }
+  }
+}

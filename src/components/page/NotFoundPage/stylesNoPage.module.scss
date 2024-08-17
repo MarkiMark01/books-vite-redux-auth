@@ -1,0 +1,42 @@
+@import "../../shared/styles/variables";
+
+.nopage {
+  height: 100vh;
+  color: $color-darkblue;
+  font-size: 24px;
+  font-weight: 600;
+
+  .nopage p {
+    font-family: "Montserrat Alternates", sans-serif;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  @media (max-width: 450px) {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  @media (max-width: 400px) {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  @media (max-width: 358px) {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .nopageLink {
+    text-decoration: underline;
+    color: $color-darkblue;
+    font-size: 17px;
+    &:hover {
+      color: #d8af69;
+    }
+    @media (max-width: 400px) {
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+}

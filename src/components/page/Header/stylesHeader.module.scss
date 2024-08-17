@@ -1,0 +1,427 @@
+@import "../../shared//styles/variables";
+@import "../../shared/styles/placeholders";
+
+.header {
+  @extend %flex-center;
+  width: 100%;
+  height: 40px;
+  background-color: $color-darkblue;
+  text-decoration: none;
+  list-style: none;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  .header2 {
+    @extend %flex-sb;
+    width: 64%;
+    height: 40px;
+    background-color: $color-darkblue;
+    text-decoration: none;
+    list-style: none;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-right: 5px;
+
+    @media (max-width: 1850px) {
+      width: 66%;
+    }
+    @media (max-width: 1750px) {
+      width: 70%;
+    }
+    @media (max-width: 1670px) {
+      width: 74%;
+    }
+    @media (max-width: 1605px) {
+      width: 77%;
+    }
+    @media (max-width: 1505px) {
+      width: 82%;
+    }
+    @media (max-width: 1450px) {
+      width: 85%;
+    }
+    @media (max-width: 1400px) {
+      width: 88%;
+    }
+    @media (max-width: 1350px) {
+      width: 91%;
+    }
+    @media (max-width: 1300px) {
+      width: 96%;
+    }
+
+    .header__burger {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      width: 26px;
+      height: 20px;
+      background-color: #001838;
+      z-index: 1;
+      cursor: pointer;
+
+      @media (max-width: 550px) {
+        width: 24px;
+        height: 18px;
+        margin-left: 4px;
+      }
+      @media (max-width: 450px) {
+        width: 22px;
+        height: 16px;
+      }
+      @media (max-width: 358px) {
+        width: 20px;
+        height: 16px;
+      }
+
+      .header__burgerSpan {
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transform: scale(1);
+      }
+
+      @media (max-width: 899px) {
+        display: flex;
+      }
+    }
+
+    .header__burger::before,
+    .header__burger::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 100%;
+      background-color: #fff;
+      transition: all 0.1s ease 0s;
+    }
+
+    .header__burger::before {
+      top: 0;
+    }
+    .header__burger::after {
+      bottom: 0;
+    }
+
+    .header__burger.active span {
+      transform: scale(0);
+    }
+    .header__burger.active::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0, -50%);
+    }
+    .header__burger.active::after {
+      top: 50%;
+      transform: rotate(45deg) translate(0, 50%);
+    }
+
+    .nav {
+      @extend %flex-center;
+      list-style: none;
+      text-decoration: none;
+      margin: 0;
+      margin-left: 5px;
+      padding: 0px;
+
+      @media (max-width: 899px) {
+        display: none;
+      }
+    }
+
+    .link {
+      @extend %flex-center;
+      padding: 6px 10px;
+      color: $color-white;
+      text-decoration: none;
+      font-size: 18px;
+      font-family: "Montserrat Alternates", sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .link.active {
+      @extend %flex-center;
+      width: 99px;
+      height: 29px;
+      background-color: $color-blue;
+      border-radius: 15px;
+    }
+  }
+
+  .logout {
+    @extend %flex-sa;
+    max-width: 300px;
+
+    @media (max-width: 650px) {
+      width: 180px;
+    }
+    @media (max-width: 550px) {
+      width: 160px;
+    }
+    @media (max-width: 450px) {
+      width: 150px;
+    }
+
+    .btnFlags {
+      @extend %flex-sb;
+      width: 50px;
+      margin-right: 10px;
+
+      @media (max-width: 899px) {
+        display: none;
+      }
+
+      .flags {
+        width: 23px;
+        height: 23px;
+        cursor: pointer;
+      }
+    }
+
+    .logout__name {
+      font-size: 17px;
+      color: $color-white;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+
+      @media (max-width: 650px) {
+        font-size: 16px;
+      }
+      @media (max-width: 550px) {
+        font-size: 15px;
+      }
+      @media (max-width: 450px) {
+        font-size: 14px;
+      }
+      @media (max-width: 375px) {
+        font-size: 13px;
+        margin-right: 5px;
+      }
+      @media (max-width: 358px) {
+        font-size: 12px;
+        margin-right: 3px;
+      }
+    }
+    .logout__btn {
+      @extend %flex-center;
+      width: 65px;
+      height: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 15px;
+      background-color: $color-blue;
+      color: $color-white;
+      border: 1.5px solid $color-white;
+      cursor: pointer;
+
+      @media (max-width: 650px) {
+        width: 58px;
+        // height: 27px;
+        font-size: 11px;
+        font-weight: 500;
+      }
+      @media (max-width: 550px) {
+        // width: 87px;
+        height: 26px;
+        font-size: 11px;
+        font-weight: 500;
+      }
+      @media (max-width: 450px) {
+        // width: 72px;
+        height: 25px;
+        font-size: 9px;
+        font-weight: 500;
+      }
+
+      &:hover {
+        background: $color-linear-gradient;
+        color: #001838;
+        transition: 0.25s;
+        border: 1.5px solid $color-white;
+      }
+    }
+
+    .logout__icon {
+      width: 30px;
+      height: 30px;
+      background: $color-linear-gradient;
+      border-radius: 50%;
+
+      @media (max-width: 650px) {
+        width: 28px;
+        height: 28px;
+      }
+      @media (max-width: 550px) {
+        width: 26px;
+        height: 26px;
+      }
+      @media (max-width: 450px) {
+        width: 25px;
+        height: 25px;
+      }
+      @media (max-width: 375px) {
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+      }
+      @media (max-width: 358px) {
+        width: 23px;
+        height: 23px;
+        margin-right: 3px;
+      }
+    }
+  }
+}
+
+.headerRegister {
+  @extend %flex-center;
+  width: 100%;
+  height: 40px;
+  background-color: $color-darkblue;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  .headerRegister2 {
+    @extend %flex-sb;
+    width: 64%;
+    height: 40px;
+    background-color: $color-darkblue;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin-right: 5px;
+
+    .btnFlags {
+      @extend %flex-sb;
+      width: 50px;
+      margin-right: 15px;
+
+      @media (max-width: 375px) {
+        width: 48px;
+      }
+      @media (max-width: 319px) {
+        width: 46px;
+      }
+
+      .flags {
+        width: 23px;
+        height: 23px;
+        cursor: pointer;
+
+        @media (max-width: 375px) {
+          width: 21px;
+          height: 21px;
+          margin-left: 5px;
+        }
+        @media (max-width: 319px) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    @media (max-width: 1850px) {
+      width: 66%;
+    }
+    @media (max-width: 1750px) {
+      width: 70%;
+    }
+    @media (max-width: 1670px) {
+      width: 73%;
+    }
+    @media (max-width: 1605px) {
+      width: 77%;
+    }
+    @media (max-width: 1505px) {
+      width: 82%;
+    }
+    @media (max-width: 1450px) {
+      width: 85%;
+    }
+    @media (max-width: 1400px) {
+      width: 88%;
+    }
+    @media (max-width: 1350px) {
+      width: 91%;
+    }
+    @media (max-width: 1300px) {
+      width: 96%;
+    }
+  }
+
+  .navRegister {
+    @extend %flex-sb;
+    max-width: 225px;
+    background: $color-linear-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 14px;
+    font-weight: 800;
+
+    @media (max-width: 450px) {
+      max-width: 205px;
+      font-size: 13px;
+      font-weight: 900;
+    }
+    @media (max-width: 375px) {
+      font-size: 12px;
+    }
+    @media (max-width: 340px) {
+      font-size: 11px;
+    }
+  }
+
+  .navReg {
+    @extend %flex-sb;
+    max-width: 160px;
+
+    @media (max-width: 450px) {
+      max-width: 150px;
+    }
+  }
+}
+
+.logo {
+  background: $color-linear-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 23px;
+  font-weight: 900;
+  cursor: pointer;
+
+  @media (max-width: 650px) {
+    font-size: 22px;
+    font-weight: 800;
+  }
+  @media (max-width: 550px) {
+    font-size: 21px;
+    font-weight: 800;
+  }
+  @media (max-width: 450px) {
+    font-size: 19px;
+    font-weight: 800;
+    margin: 0 10px 0 10px;
+  }
+  @media (max-width: 375px) {
+    font-size: 18px;
+    font-weight: 800;
+  }
+  @media (max-width: 358px) {
+    font-size: 16px;
+    font-weight: 800;
+  }
+}
+
+.head {
+  width: 100%;
+  height: 0px;
+  background: $color-linear-gradient;
+}

@@ -1,0 +1,264 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/placeholders";
+
+.books {
+  @extend %flex-center;
+  flex-direction: column;
+  width: 100%;
+  background-color: $color-lightblue;
+
+  .books__mainContainer {
+    @extend %flex-center2;
+    width: 100%;
+    min-height: 100vh;
+    background-color: $color-lightblue;
+
+    .books__container {
+      @extend %flex-sa;
+      flex-wrap: wrap;
+      width: 1220px;
+      min-height: 100vh;
+      padding-left: 0px;
+      background-color: $color-white;
+      margin-top: 0px;
+      margin-bottom: 0px;
+
+      @media (max-width: 1200px) {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .books__box {
+        @extend %flex-sb;
+        flex-direction: column;
+        margin: 0px 0px 20px 0px;
+        width: 350px;
+        height: 500px;
+        border-radius: 15px;
+        background-color: $color-grey;
+        border: 2px solid $color-lightblue;
+        box-shadow: 17px 17px 25px -26px $color-blue;
+        transition: transform linear 0.1s;
+        cursor: pointer;
+        object-fit: contain;
+
+        @media (max-width: 1110px) {
+          width: 300px;
+          height: 450px;
+        }
+
+        @media (max-width: 930px) {
+          width: 280px;
+          height: 430px;
+        }
+        @media (max-width: 630px) {
+          width: 260px;
+          height: 410px;
+        }
+        @media (max-width: 570px) {
+          width: 250px;
+          height: 400px;
+        }
+
+        &:hover {
+          transform: scale(1.03);
+        }
+
+        .books__img {
+          width: 90%;
+          height: 75%;
+          margin-top: 5px;
+          border-radius: 15px;
+          border: 1px solid $color-darkblue;
+          object-fit: contain;
+          background-color: $color-white;
+
+          @media (max-width: 1110px) {
+            width: 89%;
+            height: 73%;
+          }
+          @media (max-width: 630px) {
+            width: 88%;
+            height: 72%;
+          }
+          @media (max-width: 570px) {
+            width: 87%;
+            height: 71%;
+          }
+        }
+        .books__title {
+          @extend %flex-start;
+          margin: 0px;
+          margin-top: 15px;
+          width: 90%;
+          height: 25px;
+          font-size: 18px;
+          font-family: "Montserrat Alternates", sans-serif;
+          font-weight: 700;
+          color: $color-darkblue;
+
+          @media (max-width: 1110px) {
+            font-size: 17px;
+          }
+          @media (max-width: 930px) {
+            font-size: 16px;
+          }
+          @media (max-width: 630px) {
+            font-size: 16px;
+          }
+        }
+        .books__author {
+          margin: 0px;
+          width: 90%;
+          font-size: 16px;
+          text-align: start;
+          font-family: "Montserrat Alternates", sans-serif;
+          font-weight: 600;
+          color: $color-darkblue;
+          margin-top: 10px;
+
+          @media (max-width: 1110px) {
+            font-size: 15px;
+          }
+          @media (max-width: 930px) {
+            font-size: 14px;
+          }
+        }
+        .books__price {
+          margin: 10px 5px 0px 0px;
+          font-size: 19px;
+          font-family: "Montserrat Alternates", sans-serif;
+          font-weight: 600;
+          color: $color-darkblue;
+
+          @media (max-width: 1110px) {
+            font-size: 18px;
+          }
+        }
+        .book__purchase {
+          @extend %flex-sb2;
+          width: 90%;
+          height: 35px;
+          margin-bottom: 15px;
+
+          @media (max-width: 930px) {
+            margin-bottom: 10px;
+          }
+        }
+        .books__button {
+          @extend %flex-center;
+          width: 80px;
+          height: 35px;
+          font-family: "Montserrat Alternates", sans-serif;
+          font-weight: 700;
+          border-radius: 50px;
+          border: 0px;
+          color: $color-white;
+          background: $color-linear-gradient;
+          color: $color-darkblue;
+          transition: 0.25s;
+          cursor: pointer;
+          margin-bottom: 15px;
+          transform: scale(1);
+
+          @media (max-width: 1110px) {
+            width: 73px;
+            height: 33px;
+            font-size: 12px;
+          }
+          @media (max-width: 930px) {
+            width: 71px;
+            height: 31px;
+            margin-bottom: 0px;
+            margin-top: 3px;
+          }
+          @media (max-width: 630px) {
+            width: 70px;
+            height: 30px;
+            font-size: 11px;
+          }
+          @media (max-width: 570px) {
+            width: 68px;
+            height: 30px;
+          }
+
+          &:hover {
+            background: $color-darkblue;
+            color: $color-gold;
+            transform: scale(1.02);
+          }
+        }
+      }
+    }
+  }
+
+  .books__filter {
+    @extend %flex-center;
+    width: 1220px;
+    height: 60px;
+    background-color: $color-white;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @media (max-width: 570px) {
+      width: 100%;
+    }
+
+    .books__filterText {
+      display: block;
+      text-align: center;
+      width: 480px;
+      height: 32px;
+      border: 1px solid $color-darkblue;
+      border-radius: 15px;
+      outline: none;
+      font-size: 16px;
+      background-color: $color-grey;
+      margin-right: 30px;
+
+      @media (max-width: 570px) {
+        width: 360px;
+      }
+      @media (max-width: 400px) {
+        width: 100%;
+        font-size: 13px;
+      }
+      @media (max-width: 350px) {
+        font-size: 12px;
+      }
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+    .books__filterPrice {
+      display: block;
+      text-align: center;
+      width: 125px;
+      height: 32px;
+      font-size: 14px;
+      outline: none;
+      border-radius: 20px;
+      border: 1px solid $color-darkblue;
+      background-color: $color-grey;
+      transition: transform linear 0.1s;
+
+      @media (max-width: 400px) {
+        width: 100px;
+      }
+
+      @media (max-width: 350px) {
+        font-size: 11px;
+        width: 90px;
+      }
+
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%flex-center2 {
+  display: flex;
+  justify-content: center;
+}
+%flex-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+%flex-sb2 {
+  display: flex;
+  justify-content: space-between;
+}
+%flex-sa {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+%flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+%flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
