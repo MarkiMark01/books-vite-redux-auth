@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./stylesCart.module.scss";
-import cartImg from "../../../Assets/cart.svg";
-import bin from "../../../Assets/bin.png";
+import cartImg from "../../../assets/cart.svg";
+import bin from "../../../assets/bin.png";
 import ModalWindow from "../Modal/ModalCart";
 
 const CartComponents = ({

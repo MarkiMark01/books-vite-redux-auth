@@ -1,7 +1,7 @@
 import React from "react";
 import { createPortal } from "react-dom";
 import styles from "./stylesModalCart.module.scss";
-import gift from "../../../Assets/thanks.jpg";
+import gift from "../../../assets/thanks.jpg";
 import useModal from "../../shared/hooks/useModal";
 
 const modalRoot = document.querySelector("#modal-root");

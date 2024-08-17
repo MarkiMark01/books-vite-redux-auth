@@ -5,9 +5,9 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import styles from "../Header/stylesHeader.module.scss";
 
-import icon from "../../../Assets/pngegg.png";
-import usa from "../../../Assets/usa.png";
-import ua from "../../../Assets/ua.png";
+import icon from "../../../assets/pngegg.png";
+import usa from "../../../assets/usa.png";
+import ua from "../../../assets/ua.png";
 
 const LANGUAGE_KEY = "language";
 
