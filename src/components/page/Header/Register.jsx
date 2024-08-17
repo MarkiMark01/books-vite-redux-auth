@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./stylesHeader.module.scss";
 import { useTranslation } from "react-i18next";
-import usa from "../../../Assets/usa.png";
-import ua from "../../../Assets/ua.png";
+import usa from "../../../assets/usa.png";
+import ua from "../../../assets/ua.png";
 
 const Register = () => {
   const { t, i18n } = useTranslation();
