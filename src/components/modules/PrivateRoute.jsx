@@ -8,20 +8,17 @@ const PrivateRoutes = () => {
   const user = useSelector((state) => state.auth.user);
 
   useEffect(() => {
-    // Якщо `user` не null, завантаження завершене
     if (user !== null) {
       setLoading(false);
     }
   }, [user]);
-
+  
   if (loading) {
     return <Loader />;
   }
-
   if (!user) {
     return <Navigate to="/login" />;
   }
-
   return <Outlet />;
 };
 
