@@ -19,9 +19,14 @@ const authSlice = createSlice({
 export const { setUser, clearUser } = authSlice.actions;
 
 export const fetchUser = () => async (dispatch) => {
-  const { data } = await supabase.auth.getUser();
+  const { data, error } = await supabase.auth.getUser();
   if (data?.user) {
     dispatch(setUser(data.user));
+  } else {
+    dispatch(clearUser());
+  }
+  if (error) {
+    console.error("Error fetching user:", error);
   }
 };
 
@@ -31,3 +36,5 @@ export const signOutUser = () => async (dispatch) => {
 };
 
 export default authSlice.reducer;
+
+
