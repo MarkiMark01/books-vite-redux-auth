@@ -15,7 +15,6 @@ const PrivateRoutes = () => {
   }, [user]);
 
   if (loading) {
-    // Показати лоадер або нічого не рендерити, поки завантаження користувача
     return <Loader />;
   }
 
