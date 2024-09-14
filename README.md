@@ -1,8 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Developed a full-featured online bookstore available on web platforms using React, with built-in user authentication. The application allows users to browse a catalog of books, view detailed descriptions, and manage a shopping cart. Authorized users can add books to their cart, seamlessly navigate between internal pages, and proceed with purchases. The project includes a fully responsive design and supports multilingual functionality, ensuring a consistent user experience across both platforms. Technologies used for development include: JavaScript, React, Redux (Toolkit), HTML, SCSS, and Responsive Web Design with language switching support. 
+Deployed Version:
+https://books-vite-redux-auth.vercel.app
