@@ -43,23 +43,19 @@ const BooksId = () => {
   };
 
   const handlePurchase = () => {
-    const isBookInCart = cart.some((item) => item.id === uniqueBook.id);
-    if (isBookInCart) {
-      // toggleModalOpen();
-    } else {
-      dispatch(
-        addNewCart({
-          id: uniqueBook.id,
-          title: uniqueBook.title,
-          price: uniqueBook.price,
-          quantity: quantity,
-          totalPrice: totalPrice,
-        })
-      );
-      setQuantity(1);
-      navigate("/cart");
-    }
+    dispatch(
+      addNewCart({
+        id: uniqueBook.id,
+        title: uniqueBook.title,
+        price: uniqueBook.price,
+        quantity: quantity,
+        totalPrice: totalPrice,
+      })
+    );
+    setQuantity(1);
+    navigate("/cart");
   };
+
   return (
     <BooksIdComponents
       uniqueBook={uniqueBook}

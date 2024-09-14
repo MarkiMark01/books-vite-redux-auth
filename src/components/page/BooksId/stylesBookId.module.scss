@@ -457,7 +457,7 @@
     }
 
     .bookId__button2 {
-      width: 100px;
+      width: 95px;
       height: 35px;
       border-radius: 50px;
       border: 1px solid $color-darkblue;
@@ -481,4 +481,17 @@
       }
     }
   }
+}
+.bookId__nopage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+
+.bookId__nopage_p {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Montserrat Alternates", sans-serif;
 }
