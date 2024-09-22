@@ -15,7 +15,7 @@ export const calculateTotalPrice = (cart) => {
 };
 
 const Cart = () => {
-  const cart = useSelector((state) => state.books.cart) || [];
+  const cart = useSelector((state) => state.books.cart) ?? [];
   const totalPrice = calculateTotalPrice(cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -32,18 +32,13 @@ const Cart = () => {
     dispatch(fetchCart());
   }, [dispatch]);
 
-  const goToHome = () => {
-    navigate("/");
-  };
-
-  const goToBack = () => {
+  const goBack = () => {
     navigate(-1);
   };
 
   return (
     <CartComponents
-      goToBack={goToBack}
-      goToHome={goToHome}
+      goBack={goBack}
       handleClearCart={handleClearCart}
       cart={cart}
       totalPrice={totalPrice}

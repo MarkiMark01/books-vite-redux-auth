@@ -4,7 +4,7 @@ import styles from "./stylesCart.module.scss";
 import bin from "../../../assets/bin.png";
 import cartImg from "../../../assets/cart.svg";
 
-const CartItems = ({ cart, handleRemoveFromCart, totalSum }) => {
+const CartItems = ({ cart, handleRemoveFromCart, totalSum, handlePurchase }) => {
   const { t } = useTranslation();
 
   return (
@@ -32,7 +32,6 @@ const CartItems = ({ cart, handleRemoveFromCart, totalSum }) => {
             </section>
 
             <section className={styles.item9}>
-              {t("Total Price")}: ${item.totalPrice}
             </section>
           </li>
         ))
@@ -44,9 +43,20 @@ const CartItems = ({ cart, handleRemoveFromCart, totalSum }) => {
       )}
       {cart.length > 0 && (
         <div className={styles.cart__totalSum}>
-          <span style={{ fontFamily: "Montserrat Alternates" }}>
+          <span style={{ fontFamily: "Montserrat Alternates", marginRight: 25 }}>
             {t("Total Sum")}: ${totalSum}
           </span>
+          <section>
+        <button
+          type="button"
+          onClick={handlePurchase}
+          className={styles.cart__button}
+          disabled={cart.length === 0}
+        >
+          {t("Purchase")}
+        </button>
+      </section>
+          
         </div>
       )}
     </ul>

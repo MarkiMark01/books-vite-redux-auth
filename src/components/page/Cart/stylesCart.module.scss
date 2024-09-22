@@ -527,13 +527,15 @@
       }
 
       .cart__totalSum {
-        @extend %flex-end;
-        width: 70%;
+        @extend %flex-sb;
+        width: 52%;
+        height: 45px;
         font-size: 22px;
         font-weight: 600;
         color: $color-darkblue;
-        margin-top: 20px;
-        padding-right: 20px;
+        border-radius: 20px;
+        margin-top: 30px;
+        margin-left: 35px;
 
         @media (max-width: 899px) {
           font-size: 20px;
@@ -554,6 +556,50 @@
           font-size: 15px;
         }
       }
+    }
+  }
+  .cart__button {
+    @extend %flex-center;
+    width: 70px;
+    height: 35px;
+    font-size: 12px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 800;
+    border-radius: 50px;
+    border: 1px solid $color-darkblue;
+    background: $color-linear-gradient;
+    color: $color-darkblue;
+    transition: 0.1s;
+    cursor: pointer;
+
+    @media (max-width: 699px) {
+      width: 65px;
+      height: 30px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    @media (max-width: 490px) {
+      width: 55px;
+      height: 26px;
+      font-size: 10px;
+    }
+    @media (max-width: 490px) {
+      width: 45px;
+      height: 23px;
+      font-size: 8px;
+    }
+    @media (max-width: 350px) {
+      font-size: 7px;
+      font-weight: 800;
+      width: 43px;
+      height: 21px;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+      background: $color-darkblue;
+      color: $color-gold;
+      border: 2px solid $color-gold;
     }
   }
 }
