@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { signOutUser } from "../../redux/auth/authSlice";
 import { useTranslation } from "react-i18next";
@@ -21,6 +21,8 @@ const Logout = () => {
     await dispatch(signOutUser());
     navigate("/");
   };
+
+  const firstName = user && user.includes(' ') ? user.split(' ')[0] : user;
 
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
@@ -57,7 +59,7 @@ const Logout = () => {
         <>
           <img src={icon} alt="Avatar" className={styles.logout__icon} />
           <span className={styles.logout__name}>
-            {user.user_metadata?.full_name || user.email}
+            {firstName || user.user_metadata?.full_name || user.email}
           </span>
           <button onClick={handleSignOut} className={styles.logout__btn}>
             {t("Log out")}
@@ -69,3 +71,4 @@ const Logout = () => {
 };
 
 export default Logout;
+
