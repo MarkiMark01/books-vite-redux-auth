@@ -22,8 +22,6 @@ const Logout = () => {
     navigate("/");
   };
 
-  const firstName = user && user.includes(' ') ? user.split(' ')[0] : user;
-
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
   useEffect(() => {
@@ -59,7 +57,7 @@ const Logout = () => {
         <>
           <img src={icon} alt="Avatar" className={styles.logout__icon} />
           <span className={styles.logout__name}>
-            {firstName || user.user_metadata?.full_name || user.email}
+            {user.user_metadata?.full_name || user.email}
           </span>
           <button onClick={handleSignOut} className={styles.logout__btn}>
             {t("Log out")}
@@ -71,4 +69,3 @@ const Logout = () => {
 };
 
 export default Logout;
-
