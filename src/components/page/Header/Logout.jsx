@@ -57,7 +57,7 @@ const Logout = () => {
         <>
           <img src={icon} alt="Avatar" className={styles.logout__icon} />
           <span className={styles.logout__name}>
-            Hello,{" "}
+            <span className={styles.helloText}>Hello, </span>
             {user.user_metadata?.full_name
               ? user.user_metadata.full_name.split(" ")[0]
               : user.email}
