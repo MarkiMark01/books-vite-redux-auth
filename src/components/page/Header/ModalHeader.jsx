@@ -43,13 +43,13 @@ export default function ModalHeader({ onClose }) {
     return className;
   };
 
-  // const elements = menuItems.map(({ id, to, text }) => (
-  //   <li key={id}>
-  //     <NavLink className={getClassName} to={to} onClick={handleNavLinkClick}>
-  //       {typeof text === 'string' ? t(text) : text}
-  //     </NavLink>
-  //   </li>
-  // ));
+  const elements = menuItems.map(({ id, to, text }) => (
+    <li key={id}>
+      <NavLink className={getClassName} to={to} onClick={handleNavLinkClick}>
+        {typeof text === 'string' ? t(text) : text} 
+      </NavLink>
+    </li>
+  ));
   
 
   return createPortal(
