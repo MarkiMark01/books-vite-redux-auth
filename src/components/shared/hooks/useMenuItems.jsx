@@ -29,7 +29,8 @@ const useMenuItems = () => {
       id: nanoid(),
       to: "/cart",
       text: (
-        <div style={{ position: 'relative', display: 'flex', justifyContent:'center', alignItems:'center' }}>
+        <div style={{ position: 'relative', display: 'flex', 
+        justifyContent:'center', alignItems:'center', marginTop: 3, marginRight: 2 }}>
           {t("Cart")}
           <span
             style={{
