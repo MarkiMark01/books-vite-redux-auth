@@ -28,31 +28,30 @@ const useMenuItems = () => {
     {
       id: nanoid(),
       to: "/cart",
-      text: 
-    //   (
-        // <div style={{ position: 'relative', display: 'inline-block' }}>
-          t("Cart")
-        //   <span
-        //     style={{
-        //       position: "absolute",
-        //       background: 'red',
-        //       color: 'white',
-        //       borderRadius: '50%',
-        //       padding: '3px 6px',
-        //       fontSize: 8,      
-        //       top: '10px',        
-        //       right: '-13px',      
-        //       display: 'flex',
-        //       alignItems: 'center',
-        //       justifyContent: 'center',
-        //       minWidth: '10px',  
-        //       height: '14px',     
-        //     }}
-        //   >
-        //     {cart.length}
-        //   </span>
-        // </div>
-    //   ),
+      text: (
+        <div style={{ position: 'relative', display: 'inline-block' }}>
+          {t("Cart")}
+          <span
+            style={{
+              position: "absolute",
+              background: 'red',
+              color: 'white',
+              borderRadius: '50%',
+              padding: '3px 6px',
+              fontSize: 8,      
+              top: '10px',        
+              right: '-13px',      
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minWidth: '10px',  
+              height: '14px',     
+            }}
+          >
+            {cart.length}
+          </span>
+        </div>
+      ),
       
       
     },
