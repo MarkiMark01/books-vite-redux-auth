@@ -34,7 +34,7 @@ const useMenuItems = () => {
           <span
             style={{
               position: "absolute",
-              background: 'red',
+              background: '#F43F5E',
               color: 'white',
               borderRadius: '50%',
               padding: '3px 6px',
