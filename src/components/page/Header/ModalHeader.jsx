@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
 import useMenuItems from "../../shared/hooks/useMenuItems";
@@ -43,13 +43,14 @@ export default function ModalHeader({ onClose }) {
     return className;
   };
 
-  const elements = menuItems.map(({ id, to, text }) => (
-    <li key={id}>
-      <NavLink className={getClassName} to={to} onClick={handleNavLinkClick}>
-        {t(text)}
-      </NavLink>
-    </li>
-  ));
+  // const elements = menuItems.map(({ id, to, text }) => (
+  //   <li key={id}>
+  //     <NavLink className={getClassName} to={to} onClick={handleNavLinkClick}>
+  //       {typeof text === 'string' ? t(text) : text}
+  //     </NavLink>
+  //   </li>
+  // ));
+  
 
   return createPortal(
     <section className={styles.modal__backdrop} onClick={handleBackdropClick}>
