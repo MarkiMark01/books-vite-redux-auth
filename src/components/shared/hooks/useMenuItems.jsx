@@ -37,7 +37,6 @@ const useMenuItems = () => {
               background: '#F43F5E',
               color: 'white',
               borderRadius: '50%',
-              padding: '3px 6px',
               fontSize: 8,      
               top: '10px',        
               right: '-13px',      
